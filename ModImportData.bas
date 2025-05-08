@@ -5,7 +5,7 @@ Sub SpChainAllImports()
 '// This sub will chain all the import procedures for data together. Created to avoid persistent gui confirmations.
 '// Created by AL.
 
-    '// This sub will import the milano order information for the selected user date range.
+    '// This sub will import the "" order information for the selected user date range.
     '// Created by AL on 11/8/2024.
     
     '// Declare variables.
@@ -230,7 +230,7 @@ LoopStart:
 
 ErrRestart:
     
-    '// Loop for all milano usage data if applicable.
+    '// Loop for all "" usage data if applicable.
     If Ingredient <> "400140050496" And MaterialCheckTwo > 0 And AlreadyRan = False Then
         Ingredient = "400140050496"
         Set RngDynamic = Cells(Rows.Count, 1).End(xlUp).Offset(1)
@@ -281,7 +281,7 @@ DontRun:
 End Sub
 
 Sub SpImportWipinfo()
-'// This sub will import the milano order information for the selected user date range.
+'// This sub will import the "" order information for the selected user date range.
 '// Created by AL on 11/8/2024.
     
     '// Declare variables.
@@ -463,7 +463,7 @@ LoopStart:
     Dim AlreadyRan As Boolean
     Dim AlreadyRanTwo As Boolean
     
-    '// Loop for all milano usage data if applicable.
+    '// Loop for all "" usage data if applicable.
     If Ingredient <> "400140050496" And MaterialCheckTwo > 0 And AlreadyRan = False Then
         Ingredient = "400140050496"
         Set RngDynamic = Cells(Rows.Count, 1).End(xlUp).Offset(1)
@@ -667,7 +667,7 @@ Sub SpImportMexReport()
     Dim FileToOpen As Variant
     Dim SelectedBook As Workbook
     ChDrive "G:"
-    ChDir "G:\Control Room\A Lassalle\MexVision"
+    ChDir "G:\Control Room\A ""\MexVision"
 
     '// Let user select file to import.
     FileToOpen = Application.GetOpenFilename(filefilter:="Excel Files(*.xls*),*xls*", Title:="PLEASE SELECT THE CORRECT FILE")

@@ -231,13 +231,13 @@ LoopStart:
 ErrRestart:
     
     '// Loop for all "" usage data if applicable.
-    If Ingredient <> "400140050496" And MaterialCheckTwo > 0 And AlreadyRan = False Then
-        Ingredient = "400140050496"
+    If Ingredient <> "" And MaterialCheckTwo > 0 And AlreadyRan = False Then
+        Ingredient = ""
         Set RngDynamic = Cells(Rows.Count, 1).End(xlUp).Offset(1)
         AlreadyRan = True
         GoTo LoopStart
-    ElseIf Ingredient <> "400140050497" And MaterialCheckThree > 0 And AlreadyRanTwo = False Then
-        Ingredient = "400140050497"
+    ElseIf Ingredient <> "" And MaterialCheckThree > 0 And AlreadyRanTwo = False Then
+        Ingredient = ""
         Set RngDynamic = Cells(Rows.Count, 1).End(xlUp).Offset(1)
         AlreadyRanTwo = True
         GoTo LoopStart
@@ -403,11 +403,11 @@ Sub SpImportMatUsage()
     
     '// assign value to ingredient variable.
     If MaterialCheckOne > 0 Then
-        Ingredient = "400140050421"
+        Ingredient = ""
     ElseIf MaterialCheckTwo > 0 Then
-        Ingredient = "400140050496"
+        Ingredient = ""
     ElseIf MaterialCheckThree > 0 Then
-        Ingredient = "400140050497"
+        Ingredient = ""
     Else
         GoTo DontRun
     End If
@@ -464,13 +464,13 @@ LoopStart:
     Dim AlreadyRanTwo As Boolean
     
     '// Loop for all "" usage data if applicable.
-    If Ingredient <> "400140050496" And MaterialCheckTwo > 0 And AlreadyRan = False Then
-        Ingredient = "400140050496"
+    If Ingredient <> "" And MaterialCheckTwo > 0 And AlreadyRan = False Then
+        Ingredient = ""
         Set RngDynamic = Cells(Rows.Count, 1).End(xlUp).Offset(1)
         AlreadyRan = True
         GoTo LoopStart
-    ElseIf Ingredient <> "400140050497" And MaterialCheckThree > 0 And AlreadyRanTwo = False Then
-        Ingredient = "400140050497"
+    ElseIf Ingredient <> "" And MaterialCheckThree > 0 And AlreadyRanTwo = False Then
+        Ingredient = ""
         Set RngDynamic = Cells(Rows.Count, 1).End(xlUp).Offset(1)
         AlreadyRan = True
         GoTo LoopStart
@@ -600,7 +600,7 @@ Sub SpImportShiftReport()
     '// Assign values
     DateEntry = Range("DateEntry")
     FileDate = Format(DateEntry, "yyyy-mm-dd")
-    WrkBook = "G:\Reports\Cookie Daily Reports Archive\CookieReports\Cookie Daily Reports\" + (FileDate) + ".xlsx"
+    WrkBook = "" + (FileDate) + ".xlsx"
     SheetDate = Format(DateEntry, "yyyymmdd")
     Sheetpath = SheetDate + "Data"
     Trackerbk = Format(DateEntry, "MMMM YYYY") + " Cookie"
